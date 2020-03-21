@@ -16,16 +16,17 @@ $(".randomRecipe").on("click", function (event) {
     console.log(ingrTwo);
     console.log(ingrThree);
 
-    
-    // var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
 
-    // $.ajax({
-    //     url: queryURL,
-    //     method: "GET"
-    // }).then(function (response) {
-    //     console.log(response);
+    var queryURL = "http://www.recipepuppy.com/api/?i=" + ingrOne + "," + ingrTwo + "," + ingrThree;
 
-    // });
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response.results[0].href);
+       
+
+    });
 
 });
 
