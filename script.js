@@ -11,7 +11,7 @@ $("#submit-spirit").on("click", function (event) {
         method: "GET"
     }).then(function (response) {
         console.log(response);
-        // $("#drink-results").empty();
+        $("#drink-results").empty();
         for (i = 0; i < 3; i++) {
             var recipeID = response.drinks[i].idDrink;
             var recipeJawn = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + recipeID;
@@ -27,9 +27,15 @@ $("#submit-spirit").on("click", function (event) {
                 var drinkImg = response.drinks[0].strDrinkThumb;
                 var drinkInstruct = response.drinks[0].strInstructions;
                 var listDrink = $("<li>");
-                
-                $("#drink-results").append(drinkName);
-                $("#drink-results").append(drinkInstruct);
+                var listInstruct = $("<li>")
+                var img = $("<img>")
+
+                listDrink.text(drinkName);
+                listInstruct.text(drinkInstruct)
+                img.attr("src", drinkInstruct);
+                $("#drink-results").append(listDrink);
+                $("#drink-results").append(listInstruct);
+                $("drink-results").append(img);
 
 
 
@@ -44,10 +50,26 @@ $("#submit-spirit").on("click", function (event) {
 });
 
 
-$(".randomMovie").on("click", function (event) {
+$("#submit-movie").on("click", function (event) {
     event.preventDefault();
-    var actor = ""
+    $("#movie-results").empty();
+    var movie = $("#movie-title")
+        .val()
+        .trim();
 
-    var movieAPIKey = trilogy
-    var movieURL = "http://www.omdbapi.com/?apikey=" + movieAPIKey + ""
-})
+    var movieAPIKey = "trilogy"
+    var movieURL = "http://www.omdbapi.com/?apikey=" + movieAPIKey + "&t=" + movie
+
+    $.ajax({
+        url: movieURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+        var movieTitle = response.Title;
+        var listMovie = $("<li>");
+    
+        listMovie.text(movieTitle);
+        $("#movie-results").append(listMovie);
+    
+    });
+});
