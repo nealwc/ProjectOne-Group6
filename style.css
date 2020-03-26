@@ -1,3 +1,4 @@
+/* <<<<<<< HEAD
 <<<<<<< HEAD
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -5,6 +6,9 @@ body{
 
 =======
 >>>>>>> 35dbe887e8b8d0141507367e6aa84a1aeb310bb0
+=======
+
+>>>>>>> c50169604a9c8e00de173d22503e3b9a7c13a54a
 div.header{
     padding: 30px;
     text-align: center;
@@ -33,4 +37,63 @@ div.header{
   .recipeResults{
       padding: 100px;
 
+  } */
+
+
+  #movietile {
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      margin-left: 50px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      margin-right: 50px;
   }
+
+  #recipetile {
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      margin-right: 50px;
+      margin-left: 50px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+  }
+
+  #containertile {
+      margin: 0 auto; 
+  }
+
+  .control {
+      padding-top: 20px;
+      padding-bottom: 20px; 
+  }
+
+#submitmovie {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#drinktype {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#submitrecipe {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#Genre {
+    margin-top: 20px;
+}
+
+.recipeResults {
+    padding-top: 90px;
+}
+
+#header {
+    text-align: center;
+}
