@@ -15,18 +15,22 @@ div.header{
     background: purple;
     color: white;
     font-size: 30px;
+    font-family: 'Press Start 2P', cursive;
   }
 
   div.movieNav{
       text-align: center;
+      font-family: 'Fjalla One', sans-serif;
   }
 
   div.recipeNav{
       text-align: center;
+      font-family: 'Fjalla One', sans-serif;
   }
 
   .searchTitle{
       text-align: center;
+      font-family: 'Fjalla One', sans-serif;
   }
 
   .movieResults{
