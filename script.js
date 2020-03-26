@@ -1,25 +1,10 @@
 $(".randomRecipe").on("click", function (event) {
     event.preventDefault()
-    var ingrOne = $("#ingredient-one")
+    var ingredient= $("#ingredient-one")
     .val()
     .trim();
 
-    var ingrTwo = $("#ingredient-two")
-    .val()
-    .trim();
-
-    var ingrThree = $("#ingredient-three")
-    .val()
-    .trim();
-
-    console.log(ingrOne);
-    console.log(ingrTwo);
-    console.log(ingrThree);
-
-
-    // var queryURL = "http://www.recipepuppy.com/api/?i=" + ingrOne + "," + ingrTwo + "," + ingrThree;
-    // var queryURL = "https://www.recipepuppy.com/api/"
-    var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + ingrOne
+    var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + ingredient
 
     $.ajax({
         url: queryURL,
@@ -44,3 +29,10 @@ $(".randomRecipe").on("click", function (event) {
 });
 
 
+$(".randomMovie").on("click", function (event) {
+    event.preventDefault();
+    var actor = ""
+
+    var movieAPIKey = trilogy
+    var movieURL = "http://www.omdbapi.com/?apikey=" + movieAPIKey + ""
+})
