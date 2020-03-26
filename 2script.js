@@ -5,10 +5,10 @@ $("#submitMovie").on("click", function (event) {
 
     console.log(parameter);
 
-var queryURL = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" + parameter;
+var queryURL = "https://www.omdbapi.com/?t=" + parameter + "&apikey=trilogy";
 
 $.ajax({
-    url: movieURL,
+    url: queryURL,
     method: "GET"
 }).then(function (response){
     console.log(repsonse);
