@@ -1,5 +1,6 @@
 $("#submitMovie").on("click", function (event) {
     event.preventDefault()
+    $("#mov1").empty();
     var parameter = $("#movieParameter")
         .val();
 
@@ -39,5 +40,31 @@ $("#submitMovie").on("click", function (event) {
         //     <h3>${response.Plot}</h3>
         //     <img src=${response.Poster}/>
         //     </div>`);
+    });
+});
+
+$(".random-movie").on("click", function (event) {
+    event.preventDefault()
+    $("#mov1").empty();
+    var randomIMDBid = Math.floor(Math.random() * 1999999);
+    console.log(randomIMDBid);
+
+    var queryURL = "https://www.omdbapi.com/?t=&apikey=trilogy&i=tt" + randomIMDBid;
+    console.log(queryURL);
+    
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response) {
+        console.log(response);
+
+        $("#mov1").append(`<div>
+            <h3> ${"Title: " + response.Title} </h3>
+            <h3> ${"Year Released: " + response.Year} </h3>
+            <h3>${"Rating: " + response.Rated} </h3>
+            <h3>${response.Plot}</h3>
+            <img src=${response.Poster}/>
+            </div>`);
     });
 });
