@@ -15,107 +15,61 @@
 <body>
     <section class="hero is-warning" id="header">
         <div class="hero-body">
-          <div class="container">
-            <h1 class="title"><strong>
-              QauranScreen
-            </strong></h1>
-            <h3 class="subtitle">
-              Stay Home, Stay Entertained
-            </h3>
-          </div>
+            <div class="container" id="header">
+                <h1 class="title"><strong>
+                        QauranScreen
+                    </strong></h1>
+                <h3 class="subtitle">
+                    Stay Home, Stay Entertained
+                </h3>
+            </div>
         </div>
-      </section>
+    </section>
     <form>
         <div class="tile is-ancestor" id=containertile>
             <div class="tile is-parent is-6">
                 <div class="tile is-child notification is-success has-text-centered is-centered" id="movietile">
-                    <!-- <fieldset> -->
                     <legend class="searchTitle">
                         <p class="title">Search Random Movies</p>
                     </legend>
                     <div class="movieNav">
                         <div class="control">
-                            <input id= movieParameter class="input" type="text" placeholder="Enter a Key Word!">
+                            <input id=movieParameter class="input" type="text" placeholder="Enter a Title!">
                         </div>
-                        <button id= randomMovie class="button is-info is-small">Random Movie</button>
-
-
-                        <p id="Genre">
-                            <label class="dropdown is-active">Select Genre</label>
-                            <select id="myList">
-                                <option value="Pick Genre">Genre</option>
-                                <option value="Action">Action</option>
-                                <option value="Musical">Musical</option>
-                                <option value="Mystery">Mystery</option>
-                                <option value="Mythlogical">Mythlogical</option>
-                                <option value="Romace">Romace</option>
-                                <option value="Sci-Fi">Sci-Fi</option>
-                                <option value="Sitcom">Sitcom</option>
-                                <option value="War">War</option>
-                                <option value="KungFu">KungFu</option>
-                                <option value="Horror">Horror</option>
-                                <option value="History">History</option>
-                                <option value="Adventure">Adventure</option>
-                                <option value="Animation">Animation</option>
-                                <option value="Biography">Biography</option>
-                                <option value="Comedy">Comedy</option>
-                                <option value="Crime">Crime</option>
-                                <option value="Documentary">Documentary</option>
-                                <option value="Drama">Drama</option>
-                                <option value="Family">Family</option>
-                                <option value="Fantasy">Fantasy</option>
-
-                            </select>
-                        </p>
 
                         <button class="button is-info" id="submitMovie">Submit</button>
 
+                        <button id=randomMovie class="button is-info is-small">Random Movie</button>
+
                         <div class="movieResults">
                             <H1 id="movresults">Movie Results</H1>
-                            <ol type="1">
-                                <li id="mov1"></li>
-                                <li id="mov2"></li>
-                                <li id="mov3"></li>
-                            </ol>
+                            
+                                <div id="mov1"></div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
+            
+            
             <div class="tile is-parent is-6">
                 <div class="tile is-child notification is-info has-text-centered is-centered" id="recipetile">
-                    <p>
-                        <div class="drinkNav">
+                    <!-- <p> -->
+                        <div class="drinkNav" id=randomDrink>
                             <p class="title">Search Random Recipe</p>
-                            <!-- <div class="control"> -->
-                                <input class="input" type="text" placeholder="Select Base Spirit">
-                            </div>
-                            <!-- <button class="button is-success is-small" id=randomrecipe>Random Drinks</button> -->
-                            <!-- <p id="drinktype">
-                                <label class="dropdown is-active">Select Genre</label>
-                                <select name="drinkGenre" id="drinkGenre">
-                                    <option value="Pick Genre">Drink Categories</option>
-                                    <option value="Pick Genre">Beer</option>
-                                    <option value="Pick Genre">Wine</option>
-                                    <option value="Pick Genre">Hard Cider</option>
-                                    <option value="Pick Genre">Gin</option>
-                                    <option value="Pick Genre">Rum</option>
-                                    <option value="Pick Genre">Tequila</option>
-                                    <option value="Pick Genre">Vodka</option>
-                                    <option value="Pick Genre">Whiskey</option>
-                                    <option value="Pick Genre">Everclear</option>
-                                    <option value="Pick Genre">Seltzer</option>
-                                </select>
-                            </p> -->
+                            <input class="input" type="text" placeholder="Enter Drink Name!">
+                        </div>
+                        
 
-                    </p>
+                    <!-- </p> -->
                     <button class="button is-success" id="submitrecipe">Submit</button>
+
+                    <button id=randomDrink class="button is-success is-small">Random Drink</button>
 
                     <div class="recipeResults">
                         <H2>Drink Results</H2>
-                        <ol type="1">
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                        <ol>
+                            <div id="drink1"></div>
                         </ol>
                     </div>
 
@@ -125,7 +79,21 @@
 
         </div>
         </div>
-    
+
+
+
+
+
+
+        <script src="script.js"></script>
+        <script src="2script.js"></script>
+
+</body>
+
+</html>
+
+
+
         <!-- </fieldset>
     </form>
         <div class="columns">
@@ -153,10 +121,49 @@
 
 
 
+                        <!-- <p id="Genre">
+                            <label class="dropdown is-active">Select Genre</label>
+                            <select id="myList">
+                                <option value="Pick Genre">Genre</option>
+                                <option value="Action">Action</option>
+                                <option value="Musical">Musical</option>
+                                <option value="Mystery">Mystery</option>
+                                <option value="Mythlogical">Mythlogical</option>
+                                <option value="Romace">Romace</option>
+                                <option value="Sci-Fi">Sci-Fi</option>
+                                <option value="Sitcom">Sitcom</option>
+                                <option value="War">War</option>
+                                <option value="KungFu">KungFu</option>
+                                <option value="Horror">Horror</option>
+                                <option value="History">History</option>
+                                <option value="Adventure">Adventure</option>
+                                <option value="Animation">Animation</option>
+                                <option value="Biography">Biography</option>
+                                <option value="Comedy">Comedy</option>
+                                <option value="Crime">Crime</option>
+                                <option value="Documentary">Documentary</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Family">Family</option>
+                                <option value="Fantasy">Fantasy</option>
 
-        <script src="script.js"></script>
-        <script src="2script.js"></script>
+                            </select>
+                        </p> -->
 
-</body>
 
-</html>
+                        <!-- <button class="button is-success is-small" id=randomrecipe>Random Drinks</button> -->
+                        <!-- <p id="drinktype">
+                                <label class="dropdown is-active">Select Genre</label>
+                                <select name="drinkGenre" id="drinkGenre">
+                                    <option value="Pick Genre">Drink Categories</option>
+                                    <option value="Pick Genre">Beer</option>
+                                    <option value="Pick Genre">Wine</option>
+                                    <option value="Pick Genre">Hard Cider</option>
+                                    <option value="Pick Genre">Gin</option>
+                                    <option value="Pick Genre">Rum</option>
+                                    <option value="Pick Genre">Tequila</option>
+                                    <option value="Pick Genre">Vodka</option>
+                                    <option value="Pick Genre">Whiskey</option>
+                                    <option value="Pick Genre">Everclear</option>
+                                    <option value="Pick Genre">Seltzer</option>
+                                </select>
+                            </p> -->
