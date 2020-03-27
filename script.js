@@ -45,12 +45,11 @@ $("#submit-spirit").on("click", function (event) {
 
 });
 
-$("#submit-spirit").on("click", function (event) {
+$(".random-drink-button").on("click", function (event) {
     event.preventDefault()
-    $("#drink-results").empty();
+    $("#drink1").empty();
 
     var randomDrink = "https://www.thecocktaildb.com/api/json/v1/1/random.php"; // API for random cocktail
-    console.log(randomDrink);
 
     $.ajax({
         url: randomDrink,
@@ -68,9 +67,9 @@ $("#submit-spirit").on("click", function (event) {
         drinkEl.text("Cocktail: " + drinkName);
         instructEl.text("Instructions: " + drinkInstruct);
         img.attr("src", drinkImg);
-        $("#drink-results").append(drinkEl);
-        $("#drink-results").append(instructEl);
-        $("drink-results").append(img);
+        $("#drink1").append(drinkEl);
+        $("#drink1").append(instructEl);
+        $("#drink1").append(img);
 
 
     });
