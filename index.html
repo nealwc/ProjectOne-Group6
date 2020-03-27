@@ -22,47 +22,59 @@
             </div>
         </div>
     </section>
-    <form>
-        <div class="tile is-ancestor" id=containertile>
-            <div class="tile is-parent is-6">
-                <div class="tile is-child notification is-success has-text-centered is-centered" id="movietile">
-                    <legend class="searchTitle">
+        
+            <div class="tile is-ancestor" id=containertile>
+                <div class="tile is-parent is-6">
+                    <div class="tile is-child notification is-success has-text-centered is-centered" id="movietile">
+
                         <p class="title">Search Random Movies</p>
-                    </legend>
-                    <div class="movieNav">
-                        <div class="control">
-                            <input id=movieParameter class="input" type="text" placeholder="Enter a Title!">
-                        </div>
 
-                        <button class="button is-info" id="submitMovie">Submit</button>
+                        <div class="movieNav">
+                            <div class="control">
+                                <input id=movieParameter class="input" type="text" placeholder="Enter a Title!">
+                            </div>
 
-                        <button id=randomMovie class="button is-info is-small">Random Movie</button>
+                            <button class="button is-info" id="submitMovie">Submit</button>
 
-                        <div class="movieResults">
-                            <H1 id="movresults">Movie Results</H1>
-                            
+                            <button id=randomMovie class="button is-info is-small">Random Movie</button>
+
+                            <div class="movieResults">
+                                <h2 id="movresult"><strong>Movie Results</strong></h2>
+
                                 <div id="mov1"></div>
-                            
+
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            
-            <div class="tile is-parent is-6">
-                <div class="tile is-child notification is-info has-text-centered is-centered" id="recipetile">
-                    <!-- <p> -->
+
+
+                <div class="tile is-parent is-6">
+                    <div class="tile is-child notification is-info has-text-centered is-centered" id="recipetile">
+
                         <div class="drinkNav" id=randomDrink>
                             <p class="title">Search Random Recipe</p>
                             <input class="input" type="text" placeholder="Enter Drink Name!">
                         </div>
-                        
 
-                    <!-- </p> -->
-                    <button class="button is-success" id="submitrecipe">Submit</button>
 
-                    <button id=randomDrink class="button is-success is-small">Random Drink</button>
+                        <button class="button is-success" id="submitrecipe">Submit</button>
 
+<<<<<<< HEAD
+                        <button id=randomDrink class="button is-success is-small">Random Drink</button>
+
+                        <div class="recipeResults" id="drinkresult">
+                            <h2><strong>Drink Results</strong></h2>
+                            <ol>
+                                <div id="drink1"></div>
+                            </ol>
+                        </div>
+
+
+                    </div>
+                </div>
+
+=======
                     <div class="recipeResults">
                         <H2>Drink Results</H2>
                         <ol>
@@ -70,10 +82,10 @@
                         </ol>
                     </div>
                 </div>
+>>>>>>> e64d9c674aa20dfbcdba0a82e25128b78f01a6d3
             </div>
         </div>
-        </div>
-
+        
 
 
 
@@ -88,7 +100,7 @@
 
 
 
-        <!-- </fieldset>
+<!-- </fieldset>
     </form>
         <div class="columns">
             <div class="column">
@@ -115,7 +127,7 @@
 
 
 
-                        <!-- <p id="Genre">
+<!-- <p id="Genre">
                             <label class="dropdown is-active">Select Genre</label>
                             <select id="myList">
                                 <option value="Pick Genre">Genre</option>
@@ -144,8 +156,8 @@
                         </p> -->
 
 
-                        <!-- <button class="button is-success is-small" id=randomrecipe>Random Drinks</button> -->
-                        <!-- <p id="drinktype">
+<!-- <button class="button is-success is-small" id=randomrecipe>Random Drinks</button> -->
+<!-- <p id="drinktype">
                                 <label class="dropdown is-active">Select Genre</label>
                                 <select name="drinkGenre" id="drinkGenre">
                                     <option value="Pick Genre">Drink Categories</option>
