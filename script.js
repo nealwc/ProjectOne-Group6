@@ -1,6 +1,7 @@
-$("#submit-spirit").on("click", function (event) {
+$(".cocktail-button").on("click", function (event) {
     event.preventDefault()
-    var cocktail = $("#spiritInput") // grabs user input for specific cocktail
+    $("#drink1").empty();
+    var cocktail = $(".known-cocktail") // grabs user input for specific known cocktail
         .val()
         .trim();
 
@@ -10,47 +11,44 @@ $("#submit-spirit").on("click", function (event) {
         url: queryURL,
         method: "GET"
     }).then(function (response) { // only returns cocktail name, photo and id
-        console.log(response); 
-        $("#drink-results").empty();
+        console.log(response);
 
-            var recipeID = response.drinks[0].idDrink; // grabs API cocktail id needed for cocktail data API
-            var recipeData = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + recipeID;
-            console.log(recipeData);
+        var recipeID = response.drinks[0].idDrink; // grabs API cocktail id needed for cocktail data API
+        var recipeData = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + recipeID;
+        console.log(recipeData);
 
-            $.ajax({
-                url: recipeDate,
-                method: "GET"
-            }).then(function (response) {
-                console.log(response.drinks[0].strDrink);
+        $.ajax({
+            url: recipeDate,
+            method: "GET"
+        }).then(function (response) {
 
-                var drinkName = response.drinks[0].strDrink;
-                var drinkImg = response.drinks[0].strDrinkThumb;
-                var drinkInstruct = response.drinks[0].strInstructions;
-                var listDrink = $("<li>");
-                var listInstruct = $("<li>")
-                var img = $("<img>")
-
-                listDrink.text(drinkName);
-                listInstruct.text(drinkInstruct)
-                img.attr("src", drinkInstruct);
-                $("#drink-results").append(listDrink);
-                $("#drink-results").append(listInstruct);
-                $("drink-results").append(img);
+            var drinkName = response.drinks[0].strDrink;
+            var drinkImg = response.drinks[0].strDrinkThumb;
+            var drinkInstruct = response.drinks[0].strInstructions;
+            var drinkEl = $("<div>");
+            var instructEl = $("<div>")
+            var img = $("<img>")
+    
+            drinkEl.text("Cocktail: " + drinkName);
+            instructEl.text("Instructions: " + drinkInstruct);
+            img.attr("src", drinkImg);
+            $("#drink1").append(drinkEl);
+            $("#drink1").append(instructEl);
+            $("#drink1").append(img);
 
 
-            });
+        });
 
 
     });
 
 });
 
-$("#submit-spirit").on("click", function (event) {
+$(".random-drink-button").on("click", function (event) {
     event.preventDefault()
-    $("#drink-results").empty();
+    $("#drink1").empty();
 
     var randomDrink = "https://www.thecocktaildb.com/api/json/v1/1/random.php"; // API for random cocktail
-    console.log(randomDrink);
 
     $.ajax({
         url: randomDrink,
@@ -68,9 +66,9 @@ $("#submit-spirit").on("click", function (event) {
         drinkEl.text("Cocktail: " + drinkName);
         instructEl.text("Instructions: " + drinkInstruct);
         img.attr("src", drinkImg);
-        $("#drink-results").append(drinkEl);
-        $("#drink-results").append(instructEl);
-        $("drink-results").append(img);
+        $("#drink1").append(drinkEl);
+        $("#drink1").append(instructEl);
+        $("#drink1").append(img);
 
 
     });
