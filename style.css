@@ -66,16 +66,7 @@ div.header{
       margin-bottom: 50px;
   }
 
-  #containertile {
-      margin: 0 auto; 
-  }
-
-  .control {
-      padding-top: 20px;
-      padding-bottom: 20px; 
-  }
-
-#submitmovie {
+/* #submitMovie {
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -88,16 +79,15 @@ div.header{
 #submitrecipe {
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-#Genre {
-    margin-top: 20px;
-}
-
-.recipeResults {
-    padding-top: 90px;
-}
+} */
 
 #header {
     text-align: center;
+    margin-bottom: 20px;
 }
+/* 
+#randomDrink {
+    position: relative;
+    bottom: 20px;
+    
+} */
