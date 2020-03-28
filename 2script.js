@@ -25,26 +25,19 @@ $("#submitMovie").on("click", function (event) {
             <h3>${response.Plot}</h3>
             <img src=${response.Poster}/>
             </div>`);
-
-        // $("#mov2").append(`<div>
-        //     <h3> ${"Title: " + response.Title} </h3>
-        //     <h3> ${"Year Released: " + response.Year} </h3>
-        //     <h3>${"Rating: " + response.Rated} </h3>
-        //     <h3>${response.Plot}</h3>
-        //     <img src=${response.Poster}/>
-        //     </div>`);
-
-        // $("#mov3").append(`<div>
-        //     <h3> ${"Title: " + response.Title} </h3>
-        //     <h3> ${"Year Released: " + response.Year} </h3>
-        //     <h3>${"Rating: " + response.Rated} </h3>
-        //     <h3>${response.Plot}</h3>
-        //     <img src=${response.Poster}/>
-        //     </div>`);
     });
 });
 
+$(".randomAll").on("click", function (event) {
+    displayRandomMovie();
+
+});
+
 $(".random-movie").on("click", function (event) {
+    displayRandomMovie();
+});
+
+function displayRandomMovie() {
     event.preventDefault()
     $("#mov1").empty();
     generateRandomMovie();
@@ -56,9 +49,6 @@ $(".random-movie").on("click", function (event) {
         var queryURL = "https://www.omdbapi.com/?t=&apikey=trilogy&i=tt" + randomIMDBid;
         console.log(queryURL);
 
-
-
-
         $.ajax({
             url: queryURL,
             method: "GET"
@@ -67,7 +57,6 @@ $(".random-movie").on("click", function (event) {
             var type = response.Type;
             var rating = parseInt(response.Metascore);
             console.log(rating);
-            
 
             if (response.Type === "movie" && rating > 5.0) {
 
@@ -85,5 +74,5 @@ $(".random-movie").on("click", function (event) {
             }
 
         });
-    }
-});
+    };
+};
