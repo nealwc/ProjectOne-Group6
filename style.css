@@ -1,11 +1,8 @@
 /* <<<<<<< HEAD
-<<<<<<< HEAD
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-=======
->>>>>>> 35dbe887e8b8d0141507367e6aa84a1aeb310bb0
 =======
 
 >>>>>>> c50169604a9c8e00de173d22503e3b9a7c13a54a
@@ -99,3 +96,10 @@ div.header{
     margin-top: 20px;
 }
 
+#title {
+    font-size: 60px;
+}
+
+#slogan {
+    font-size: 40px;
+}
